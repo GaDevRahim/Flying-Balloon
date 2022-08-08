@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     internal static int score = 0;
     internal static bool gameOver = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerRg = GetComponent<Rigidbody>();
@@ -26,7 +25,6 @@ public class PlayerController : MonoBehaviour
         playerSound = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < maxYPosi && !gameOver) 

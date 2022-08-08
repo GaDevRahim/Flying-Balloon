@@ -13,7 +13,6 @@ public class SpawnManager : MonoBehaviour
 
     float startTime, repeatTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         startTime = 0.0f;
@@ -21,11 +20,6 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnObject", startTime, repeatTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void SpawnObject()
     {
         if (!PlayerController.gameOver)
@@ -36,6 +30,5 @@ public class SpawnManager : MonoBehaviour
             randomObject = Random.Range(0, objectPrefabs.Length);
             Instantiate(objectPrefabs[randomObject], posi, objectPrefabs[randomObject].transform.rotation);
         }
-        
     }
 }

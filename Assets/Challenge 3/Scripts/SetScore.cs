@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class SetScore : MonoBehaviour
 {
-
     Text massage;
 
     float repeatTime = 0.2f;
 
-    // Start is called before the first frame update
     void Start()
     {
         massage = GetComponent<Text>();
@@ -22,5 +20,4 @@ public class SetScore : MonoBehaviour
     {
         massage.text = "Score : " + PlayerController.score;
     }
-
 }
